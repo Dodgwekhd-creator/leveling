@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>LEVELING — Cognitive Architecture</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app-container">
+  <header>
+    <div class="brand-title">
+      LEVELING <span class="brand-tag">Core</span>
+    </div>
+    <div class="stats-dock">
+      <div class="stat-badge">🔥 <span id="streak-count">1</span></div>
+      <div class="stat-badge">⭐ <span id="solved-count">0</span></div>
+    </div>
+  </header>
+
+  <div class="mode-tabs">
+    <button class="tab-btn active" id="tab-adaptive" onclick="switchEngine('adaptive')">Apex Protocol (Adaptive)</button>
+    <button class="tab-btn" id="tab-curated" onclick="switchEngine('curated')">Paradox Core (Trials)</button>
+  </div>
+
+  <div class="view-card">
+    <div class="meta-bar">
+      <span class="domain-pill" id="domain-label">Spatial Transformation</span>
+      <span id="step-label">Tier 1</span>
+    </div>
+
+    <div class="question-title" id="question-text">
+      Initializing protocol matrix...
+    </div>
+
+    <div id="visual-workspace"></div>
+    <div class="options-grid" id="optionsContainer"></div>
+    <div class="feedback-box" id="feedbackBox"></div>
+    <div class="explanation-details" id="explanationDrawer"></div>
+
+    <div class="controls-deck">
+      <button class="btn-secondary" id="btn-reveal" onclick="triggerReveal()">I Don't Know</button>
+      <button class="btn-secondary" id="btn-toggle-explain" style="display:none;" onclick="toggleExplanation()">Show Logic</button>
+      <button class="btn-primary" id="btn-next" onclick="requestNextQuestion()" disabled>Next Challenge →</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+  
+</html>
